@@ -1,0 +1,32 @@
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const mobileMenuButton = document.querySelector('.mobile-menu-button');
+      const navMenu = document.querySelector('.nav-menu');
+      
+      if (mobileMenuButton && navMenu) {
+        mobileMenuButton.addEventListener('click', function() {
+          navMenu.classList.toggle('active');
+          
+          // Toggle hamburger to X
+          const bars = this.querySelectorAll('.bar');
+          bars.forEach(bar => bar.classList.toggle('active'));
+        });
+        
+        // Handle dropdown toggle on mobile
+        const navItems = document.querySelectorAll('.nav-item');
+        navItems.forEach(item => {
+          const link = item.querySelector('.nav-link');
+          const dropdown = item.querySelector('.dropdown');
+          
+          if (link && dropdown) {
+            link.addEventListener('click', function(e) {
+              if (window.innerWidth <= 768) {
+                e.preventDefault();
+                dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+              }
+            });
+          }
+        });
+      }
+    });
+  </script>
