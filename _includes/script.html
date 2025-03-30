@@ -1,32 +1,96 @@
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const mobileMenuButton = document.querySelector('.mobile-menu-button');
-      const navMenu = document.querySelector('.nav-menu');
-      
-      if (mobileMenuButton && navMenu) {
-        mobileMenuButton.addEventListener('click', function() {
-          navMenu.classList.toggle('active');
-          
-          // Toggle hamburger to X
-          const bars = this.querySelectorAll('.bar');
-          bars.forEach(bar => bar.classList.toggle('active'));
-        });
-        
-        // Handle dropdown toggle on mobile
-        const navItems = document.querySelectorAll('.nav-item');
-        navItems.forEach(item => {
-          const link = item.querySelector('.nav-link');
-          const dropdown = item.querySelector('.dropdown');
-          
-          if (link && dropdown) {
-            link.addEventListener('click', function(e) {
-              if (window.innerWidth <= 768) {
-                e.preventDefault();
-                dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
-              }
-            });
-          }
-        });
-      }
+  // Toggle mobile menu
+  document.getElementById('mobileMenuButton').addEventListener('click', function() {
+    const navMenu = document.getElementById('navMenu');
+    navMenu.classList.toggle('active');
+    
+    const bars = document.querySelectorAll('.bar');
+    bars.forEach(bar => {
+      bar.classList.toggle('active');
     });
-  </script>
+    
+    // Close all dropdowns when mobile menu is toggled
+    const activeItems = document.querySelectorAll('.nav-item.active');
+    activeItems.forEach(item => {
+      item.classList.remove('active');
+    });
+  });
+  
+  // Handle dropdown toggles for mobile
+  const navItems = document.querySelectorAll('.nav-item');
+  navItems.forEach(item => {
+    const link = item.querySelector('.nav-link');
+    const dropdown = item.querySelector('.dropdown');
+    
+    if (dropdown) {
+      link.addEventListener('click', function(event) {
+        // Only prevent default and toggle active class on mobile
+        if (window.innerWidth <= 768) {
+          event.preventDefault();
+          
+          // Close other open dropdowns
+          navItems.forEach(otherItem => {
+            if (otherItem !== item && otherItem.classList.contains('active')) {
+              otherItem.classList.remove('active');
+            }
+          });
+          
+          // Toggle current dropdown
+          item.classList.toggle('active');
+          
+          // Fix for showing dropdown in mobile
+          if (item.classList.contains('active')) {
+            dropdown.style.display = 'block';
+          } else {
+            dropdown.style.display = 'none';
+          }
+        }
+      });
+    }
+  });
+  
+  // Fix for mobile view - ensure dropdowns appear
+  function updateDropdownDisplay() {
+    const navItems = document.querySelectorAll('.nav-item');
+    
+    if (window.innerWidth <= 768) {
+      // Mobile view
+      navItems.forEach(item => {
+        const dropdown = item.querySelector('.dropdown');
+        if (dropdown) {
+          if (item.classList.contains('active')) {
+            dropdown.style.display = 'block';
+          } else {
+            dropdown.style.display = 'none';
+          }
+        }
+      });
+    } else {
+      // Desktop view - reset dropdowns to use hover
+      navItems.forEach(item => {
+        const dropdown = item.querySelector('.dropdown');
+        if (dropdown) {
+          dropdown.style.display = '';
+        }
+      });
+    }
+  }
+  
+  // Add resize listener to reset mobile menu when screen size changes
+  window.addEventListener('resize', function() {
+    if (window.innerWidth > 768) {
+      const navMenu = document.getElementById('navMenu');
+      const activeItems = document.querySelectorAll('.nav-item.active');
+      const activeBars = document.querySelectorAll('.bar.active');
+      
+      navMenu.classList.remove('active');
+      activeItems.forEach(item => item.classList.remove('active'));
+      activeBars.forEach(bar => bar.classList.remove('active'));
+    }
+    
+    updateDropdownDisplay();
+  });
+  
+  // Initialize dropdown display on page load
+  document.addEventListener('DOMContentLoaded', updateDropdownDisplay);
+</script>
