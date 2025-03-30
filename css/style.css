@@ -140,7 +140,7 @@ body {
 }
 
 .mobile-menu-button .bar.active:nth-child(1) {
-  transform: translateY(7px) rotate(45deg); /* Adjusted from 9px */
+  transform: translateY(6px) rotate(45deg); /* Reduced from 7px */
 }
 
 .mobile-menu-button .bar.active:nth-child(2) {
@@ -148,7 +148,7 @@ body {
 }
 
 .mobile-menu-button .bar.active:nth-child(3) {
-  transform: translateY(-7px) rotate(-45deg); /* Adjusted from 9px */
+  transform: translateY(-6px) rotate(-45deg); /* Reduced from 7px */
 }
 
 .nav-menu {
