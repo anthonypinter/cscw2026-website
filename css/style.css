@@ -58,9 +58,13 @@
       align-items: center;
       padding: 1.5rem 2rem;
       position: relative;
-      background-color: rgba(255, 255, 255, 0.8);
+      background-color: rgba(255, 255, 255, 1);
       backdrop-filter: blur(10px);
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      position: sticky;
+      top: 0;
+      overflow: hidden;
+      z-index:999;
     }
     
     .logo {
@@ -474,6 +478,9 @@
       .site-header {
         justify-content: space-between;
         padding: 1.2rem 1.5rem;
+        position: sticky;
+        top: 0;
+        overflow: hidden;
       }
       
       .conference-title {
@@ -590,6 +597,9 @@
       /* Nav menu stays the same on very small screens - still horizontal header */
       .site-header {
         padding: 0.8rem;
+        position: sticky;
+        top: 0;
+        overflow: hidden;
       }
     }
 
