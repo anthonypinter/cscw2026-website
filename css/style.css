@@ -316,6 +316,7 @@ body {
   border-bottom: 5px solid var(--secondary);
   padding-bottom: 0.5rem;
   font-family: 'Space Mono', monospace;
+  padding-left: 0rem;
 }
 
 .news-list {
@@ -360,7 +361,7 @@ body {
 }
 
 .news-content {
-  padding: 2rem;
+  padding: 0rem 2rem 2rem 2rem;
   position: relative;
   z-index: 1;
 }
@@ -370,6 +371,7 @@ body {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
   color: var(--light);
+  padding-left: 0;
 }
 
 .news-date {
@@ -634,19 +636,20 @@ h2 {
   position: relative;
   z-index: 1;
   text-align: left;
-  padding-left: 2rem;
+  /* padding-left: 2rem; */
+  margin-left: 2rem;
 }
 
 h3 {
   font-size: 1.5rem;
-  margin: 0rem 0rem 1rem 0rem;
+  margin: 2rem 0rem 1rem 0rem;
   position: relative;
   text-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   color: var(--light);
   position: relative;
   z-index: 1;
   text-align: left;
-  /* padding-left: 2rem; */
+  padding-left: 2rem;
 }
 
 .aside {
