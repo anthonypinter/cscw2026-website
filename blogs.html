@@ -11,13 +11,24 @@ section_id: home
         BLOG
       </h1>
 
-      <div class="news-list">
+      <!-- <div class="news-list">
         <a href="blog/reviewprocess.html" style="text-decoration: none;"><div class="news-item">
           <div class="news-content">
             <h3 class="news-heading">Paper Review Process at CSCW 2026</h3>
             <p class="news-date">April 18, 2025</p>
           </div></a>
-        </div>
+        </div> -->
+
+        {% for item in site.data.blogs limit: 6 %}
+
+        <a style="text-decoration: none;" href={{item.link}}><div class="news-item">
+          <div class="news-content">
+            <h3 class="news-heading">{{item.headline}}</h3>
+            <p class="news-date">{{item.date}}</p>
+          </div>
+        </div></a>
+
+        {% endfor %}
 
        
     </section>

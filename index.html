@@ -17,7 +17,7 @@ section_id: home
       </div>
 
       <div class="description-box">
-        <strong>CSCW 2026 will be held in the USA in October 2026. We will share the exact location and date as soon as possible</strong>
+        <strong>CSCW 2026 will be held in the USA in October 2026. We will share the exact location and date as soon as possible.</strong>
       </div>
 
       
@@ -25,14 +25,21 @@ section_id: home
     
     <section>
       <h2 class="section-title">News</h2>
+
+      <!-- News needs to be entered using the yml file found in _data. -->
       
       <div class="news-list">
-        <div class="news-item">
+        {% for item in site.data.news limit: 4 %}
+
+        <a style="text-decoration: none;" href={{item.link}}><div class="news-item">
           <div class="news-content">
-            <h3 class="news-heading">The 2026 Call for Papers is live!</h3>
-            <p class="news-date">March 30, 2025</p>
+            <h3 class="news-heading">{{item.headline}}</h3>
+            <p class="news-date">{{item.date}}</p>
           </div>
-        </div>
+        </div></a>
+
+        {% endfor %}
+      
         
         
       </div>
