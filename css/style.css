@@ -387,6 +387,31 @@ body {
   gap: 1.5rem;
 }
 
+
+
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 60px;
+  background-color: #0092CE; 
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  display: none; /* Hidden by default */
+  z-index: 1000; /* Ensure it appears on top */
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.back-to-top.show {
+  display: block; /* Show the button */
+}
+
+
 /* Responsive tables */
 table {
   display: block;
@@ -731,3 +756,4 @@ h3 {
     font-size: 14px;
   }
 }
+
