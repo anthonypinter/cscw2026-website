@@ -21,7 +21,7 @@
 }
 
 body {
-  font-family: 'Noto Sans Adlam Unjoined', 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   background-color: var(--dark);
   color: var(--light);
   overflow-x: hidden;
@@ -367,7 +367,7 @@ body {
 }
 
 .news-heading {
-  font-family: 'Space Mono', monospace;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
   color: var(--light);
@@ -377,7 +377,7 @@ body {
 .news-date {
   color: rgba(0, 0, 0, 0.6);
   font-size: 0.9rem;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Space Mono', monospace;
 }
 
 /* Grid for future content */
@@ -437,6 +437,8 @@ svg {
   max-width: 100%;
   height: auto;
 }
+
+
 
 /* Footer */
 .site-footer {
@@ -756,4 +758,3 @@ h3 {
     font-size: 14px;
   }
 }
-
