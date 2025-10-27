@@ -265,7 +265,7 @@ body {
 }
 
 .hero {
-  padding: 8vh 0;
+  padding: 4vh 0;
   position: relative;
   overflow: hidden;
 }
@@ -317,7 +317,11 @@ body {
   font-size: 1.1rem;
   line-height: 1.6;
   transform: translateZ(0);
-  margin-bottom: 2.5vh;
+  margin-bottom: 1vh;
+}
+
+#locale {
+  font-size: 1.5rem;
 }
 
 .section-title {
