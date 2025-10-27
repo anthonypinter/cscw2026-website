@@ -7,6 +7,19 @@
   box-sizing: border-box;
 }
 
+.logo-image {
+  height: 150px; /* Adjust this value to match your desired height */
+  width: auto; /* Maintains aspect ratio */
+  vertical-align: middle; /* Aligns image with text */
+  margin-right: 4px; /* Adds a small space between the image and the year */
+}
+
+@media (max-width: 480px) {
+  .logo-image {
+    height: 100px; /* Smaller size for mobile devices */
+  }
+}
+
 :root {
   --primary: #0092CE;
   --secondary: #F3B44D;
@@ -56,7 +69,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 2rem;
+  padding: 0rem 4rem 0rem 4rem;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -438,8 +451,6 @@ svg {
   height: auto;
 }
 
-
-
 /* Footer */
 .site-footer {
   background-color: rgba(255, 255, 255, 0.3);
@@ -458,7 +469,7 @@ svg {
   
   .nav-menu {
     position: fixed;
-    top: 70px;
+    top: 150px;
     left: 0;
     width: 100%;
     background-color: rgba(255, 255, 255, 1);
@@ -758,3 +769,4 @@ h3 {
     font-size: 14px;
   }
 }
+
