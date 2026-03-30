@@ -7,6 +7,60 @@
   box-sizing: border-box;
 }
 
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  margin-left: 2rem;
+  -webkit-overflow-scrolling: touch;
+}
+
+.sponsor-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+}
+
+.sponsor-table th,
+.sponsor-table td {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  padding: 10px 14px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.sponsor-table thead th {
+  font-weight: 700;
+  color: var(--light);
+  font-family: 'Space Mono', monospace;
+  font-size: 0.8rem;
+}
+
+.sponsor-table thead tr:first-child th {
+  border-bottom: 4px solid var(--primary);
+}
+
+.sponsor-table td:first-child {
+  text-align: left;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.sponsor-table tbody tr:hover td {
+  background-color: rgba(0, 146, 206, 0.05);
+}
+
+.tier-platinum { color: var(--light); }
+.tier-gold     { color: #c8a800; }
+.tier-silver   { color: #888; }
+.tier-bronze   { color: #c06000; }
+.tier-supporter{ color: #4caf50; }
+
+.yes {
+  color: var(--primary);
+  font-weight: 700;
+}
+
 .logo-image {
   height: 150px; /* Adjust this value to match your desired height */
   width: auto; /* Maintains aspect ratio */
@@ -801,7 +855,7 @@ h3 {
   }
 }
 
-@media (max-width: 1050px) and (min-width: 811px) {
+@media (max-width: 1200px) and (min-width: 811px) {
   .site-header {
     flex-direction: row;
     align-items: center;
