@@ -833,11 +833,14 @@ h3 {
   width: 100%;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
+  padding-bottom: 0.5rem;
 }
 
-.sponsor-table {
+.table-wrapper .sponsor-table {
+  display: table;
+  overflow-x: visible;
   width: 100%;
-  min-width: 700px;
+  min-width: 1300px;
   border-collapse: collapse;
   font-family: 'Montserrat', sans-serif;
   font-size: 0.9rem;
