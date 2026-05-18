@@ -656,7 +656,7 @@ svg {
 }
 
 .page-text {
-  backdrop-filter: blur(10px);
+  
   padding: 1rem 2.5rem;
   font-size: 1.1rem;
   line-height: 1.6;
@@ -934,3 +934,39 @@ h3 {
     }
     .col-cat  { width: 44%; }
     .col-date { width: 18.67%; }
+
+  .speaker-bio {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.speaker-bio img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  flex-shrink: 0;
+  border-radius: 4px;
+  left: 25px;
+  top: 25px;
+  position:relative;
+}
+
+.speaker-bio-text {
+  flex: 1;
+}
+
+@media (max-width: 600px) {
+  .speaker-bio {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .speaker-bio img {
+    width: 150px;
+    height: 250px;
+    left: 0;
+    top: 0;
+  }
+}
