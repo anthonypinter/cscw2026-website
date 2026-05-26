@@ -7,6 +7,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-padding-top: 10rem;
+}
+
 .logo-image {
   height: 150px; /* Adjust this value to match your desired height */
   width: auto; /* Maintains aspect ratio */
