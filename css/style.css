@@ -970,3 +970,7 @@ h3 {
     top: 0;
   }
 }
+
+.workshop-h3 {
+  text-transform: uppercase;
+}
