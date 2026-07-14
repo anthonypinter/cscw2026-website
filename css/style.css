@@ -675,6 +675,22 @@ svg {
   color: var(--primary);
 }
 
+.sponsor-logos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.sponsor-logos img {
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  display: block;
+}
+
 h2 {
   font-size: 2rem;
   margin: 1rem 0rem 1rem 0rem;
