@@ -686,9 +686,18 @@ svg {
 
 .sponsor-logos img {
   width: 100%;
-  max-width: 220px;
+  max-width: 322px;
   height: auto;
   display: block;
+}
+
+.sponsor-logos img.sponsor-logo-small {
+  max-width: 200px;
+}
+
+.sponsor-tier-heading {
+  font-weight: 500;
+  text-transform: none;
 }
 
 h2 {
