@@ -696,8 +696,11 @@ svg {
 }
 
 .sponsor-tier-heading {
+  width: fit-content;
   font-weight: 500;
   text-transform: none;
+  border-bottom: 2px solid #66ABEC;
+  padding-bottom: 0.4rem;
 }
 
 h2 {
