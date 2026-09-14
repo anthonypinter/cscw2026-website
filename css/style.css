@@ -1169,6 +1169,59 @@ h3 {
   line-height: 1.5;
 }
 
+.program-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.9rem 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.program-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.3rem 0.75rem;
+  padding: 0.6rem 0.85rem;
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.program-item.welcome {
+  background-color: rgba(0, 146, 206, 0.08);
+}
+
+.program-item-time {
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: var(--primary);
+  flex: 0 0 auto;
+}
+
+.program-item-paper {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.45);
+  flex: 0 0 auto;
+}
+
+.program-item-title {
+  font-weight: 600;
+  font-size: 0.92rem;
+  flex: 1 1 260px;
+}
+
+.program-item-presenter {
+  font-size: 0.85rem;
+  font-style: italic;
+  color: rgba(0, 0, 0, 0.65);
+  flex: 0 0 100%;
+}
+
 @media (max-width: 600px) {
   .schedule-block {
     margin: 0 1rem 1rem 1rem;
