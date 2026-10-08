@@ -695,6 +695,10 @@ svg {
   max-width: 200px;
 }
 
+.sponsor-logos img.sponsor-logo-wide {
+  max-width: 520px;
+}
+
 .sponsor-tier-heading {
   width: fit-content;
   font-weight: 500;
